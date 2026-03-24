@@ -65,7 +65,7 @@ const AtlasConverter = () => {
             quality: 10,
             width: frameWidth,
             height: frameHeight,
-            workerScript: '/gif.worker.js'
+            workerScript: import.meta.env.BASE_URL + 'gif.worker.js'
           });
 
           // Extract frames
