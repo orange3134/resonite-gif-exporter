@@ -4,7 +4,7 @@ import { Image as ImageIcon, Settings, Download, Loader2, Play } from 'lucide-re
 
 const AtlasConverter = () => {
   const [url, setUrl] = useState('');
-  const [fps, setFps] = useState(10);
+  const [fps, setFps] = useState(24);
   const [isGenerating, setIsGenerating] = useState(false);
   const [resultUrl, setResultUrl] = useState(null);
   const [errorMsg, setErrorMsg] = useState('');
@@ -122,8 +122,8 @@ const AtlasConverter = () => {
           ) : (
              <div>
                <ImageIcon size={32} color="var(--text-muted)" style={{ marginBottom: '1rem' }} />
-               <p style={{color: 'var(--text-muted)', margin: 0}}>①Resoniteで画像を持ちながらコンテキストメニューを開いて<strong style={{color:'var(--text-main)'}}>画像をコピー</strong>してください。</p>
-               <p style={{color: 'var(--text-muted)', margin: 0}}>②この画面で <strong style={{color:'var(--text-main)'}}>Ctrl+V</strong> を押してアトラス画像を貼り付けてください</p>
+               <p style={{color: 'var(--text-muted)', margin: 0}}>①Resoniteで動画を持ちながらコンテキストメニューを開いて<strong style={{color:'var(--text-main)'}}>画像をコピー</strong>してください。</p>
+               <p style={{color: 'var(--text-muted)', margin: 0}}>②この画面で <strong style={{color:'var(--text-main)'}}>Ctrl+V</strong> を押して貼り付けてください</p>
              </div>
           )}
         </div>
@@ -135,7 +135,7 @@ const AtlasConverter = () => {
             min="1" 
             max="60"
             value={fps}
-            onChange={(e) => setFps(Math.max(1, parseInt(e.target.value) || 10))}
+            onChange={(e) => setFps(Math.max(1, parseInt(e.target.value) || 24))}
           />
         </div>
 
